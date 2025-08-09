@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "🔧 Running Laravel Pint (full)..."
+./vendor/bin/pint || exit 1
+
+echo "🔍 Running Larastan (lint-staged)..."
+npx lint-staged || exit 1
