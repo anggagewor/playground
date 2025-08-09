@@ -2,15 +2,15 @@
 
 namespace Anggagewor\Foundation\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Anggagewor\Foundation\Console\Commands\MakeModuleCommand;
+use Illuminate\Support\ServiceProvider;
 
 class FoundationServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/foundation.php', 'foundation'
+            __DIR__.'/../../config/foundation.php', 'foundation'
         );
 
         $modulesPaths = config('foundation.modules_path', []);
@@ -18,9 +18,9 @@ class FoundationServiceProvider extends ServiceProvider
 
         foreach ($modulesPaths as $modulesPath) {
             if (is_dir($modulesPath)) {
-                foreach (glob($modulesPath . '/*', GLOB_ONLYDIR) as $modulePath) {
+                foreach (glob($modulesPath.'/*', GLOB_ONLYDIR) as $modulePath) {
                     $moduleName = basename($modulePath);
-                    $providerClass = $namespacePrefix . "{$moduleName}\\Providers\\ModuleServiceProvider";
+                    $providerClass = $namespacePrefix."{$moduleName}\\Providers\\ModuleServiceProvider";
 
                     if (class_exists($providerClass)) {
                         $this->app->register($providerClass);
@@ -29,7 +29,6 @@ class FoundationServiceProvider extends ServiceProvider
             }
         }
     }
-
 
     public function boot(): void
     {
@@ -40,7 +39,7 @@ class FoundationServiceProvider extends ServiceProvider
 
             // Publish stubs
             $this->publishes([
-                __DIR__ . '/../../stubs' => base_path('stubs/foundation'),
+                __DIR__.'/../../stubs' => base_path('stubs/foundation'),
             ], 'foundation-stubs');
         }
     }
