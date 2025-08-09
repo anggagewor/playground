@@ -12,7 +12,9 @@ class FoundationServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../../config/foundation.php', 'foundation'
         );
-
+        $this->app->singleton('api.response', function () {
+            return new \Anggagewor\Foundation\Helpers\ApiResponse;
+        });
         $modulesPaths = config('foundation.modules_path', []);
         $namespacePrefix = config('foundation.namespace', 'App\\Modules\\');
 

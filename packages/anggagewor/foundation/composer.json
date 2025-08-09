@@ -9,6 +9,11 @@
             "Anggagewor\\Foundation\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Anggagewor\\Foundation\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Angga Purnama",
