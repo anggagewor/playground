@@ -1,0 +1,27 @@
+{
+    "name": "anggagewor/foundation",
+    "description": "foundation",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Anggagewor\\Foundation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Angga Purnama",
+            "email": "anggagewor@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Anggagewor\\Foundation\\Providers\\FoundationServiceProvider"
+            ]
+        }
+    }
+}

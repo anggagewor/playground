@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Modules\{{ module }}\Application\UseCases;
+
+class SampleUseCase
+{
+    public function handle(): string
+    {
+        return 'Sample use case from {{ module }} module';
+    }
+}

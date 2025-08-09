@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Modules\{{ module }}\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class ModuleServiceProvider extends ServiceProvider
+{
+    public function boot(): void
+    {
+        $routesPath = __DIR__ . '/../routes';
+
+        if (file_exists($routesPath . '/web.php')) {
+            $this->loadRoutesFrom($routesPath . '/web.php');
+        }
+
+        if (file_exists($routesPath . '/api.php')) {
+            $this->loadRoutesFrom($routesPath . '/api.php');
+        }
+    }
+
+    public function register(): void
+    {
+        //
+    }
+}

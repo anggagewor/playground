@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "647a858afee5fb3db001bf9e559eea69",
+    "content-hash": "5d9e048612baef7d87d9ceb8d6ab9e21",
     "packages": [
+        {
+            "name": "anggagewor/foundation",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./packages/anggagewor/foundation",
+                "reference": "1616a19d4133c7c8fd660a710e72f30864bd969e"
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Anggagewor\\Foundation\\Providers\\FoundationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Anggagewor\\Foundation\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Angga Purnama",
+                    "email": "anggagewor@gmail.com"
+                }
+            ],
+            "description": "foundation",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
         {
             "name": "brick/math",
             "version": "0.13.1",
