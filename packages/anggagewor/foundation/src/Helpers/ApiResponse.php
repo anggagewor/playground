@@ -2,8 +2,8 @@
 
 namespace Anggagewor\Foundation\Helpers;
 
-use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Http\JsonResponse;
 
 class ApiResponse
